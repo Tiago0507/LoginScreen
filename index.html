@@ -7,20 +7,15 @@
     <title>Inicio de Sesión</title>
   </head>
   <!--This line allows the content to not exceed the screen size-->
-  <body class="overflow-hidden">
+  <body
+    class="overflow-hidden font-custom bg-cover bg-center"
+    style="background-image: url(public/img/Background2.jpg)"
+  >
     <!--The content of the screen is defined-->
-    <main class="flex bg-[#C7CED7]">
-      <!--General image of the University-->
-      <div>
-        <img
-          class="h-full w-full object-cover object-center"
-          src="public/img/UniversidadIcesi_image1.jpg"
-          alt="Foto de la Universidad Icesi"
-        />
-      </div>
+    <main class="flex items-center justify-center h-screen">
       <!--Login container-->
-      <section
-        class="flex flex-col items-center mt-6 mb-96 mx-auto bg-white p-10 rounded shadow space-y-5"
+      <div
+        class="flex flex-col items-center mx-auto pt-10 pb-10 bg-white bg-opacity-90 rounded shadow space-y-5"
       >
         <!--University logo-->
         <div>
@@ -32,13 +27,17 @@
         </div>
         <!--Login-->
         <form
-          class="flex flex-col justify-center items-center space-y-9 bg-[#E5E5E5] p-12 rounded shadow"
+          class="flex flex-col justify-center items-center space-y-6 p-12"
           action="#"
         >
-          <h2 class="text-[#4B4643] font-semibold text-xl">Bienvenido/a</h2>
+          <h1 class="text-[#4B4643] font-semibold text-xl">Bienvenido/a</h1>
           <!--Input for email-->
-          <div class="flex flex-col space-y-2 justify-center items-center">
-            <div class="flex">
+
+          <div class="flex mx-auto">
+            <div
+              class="flex items-center bg-[#C7CED7] p-2 border border-[#C7CED7]"
+              for="email"
+            >
               <svg
                 class="w-6 text-[#4B4643]"
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,13 +53,10 @@
                   d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                 />
               </svg>
-              <label class="text-[#4B4643]" for="email"
-                >Correo Electrónico</label
-              >
             </div>
             <input
-              class="rounded border border-[#4B4643] p-1 w-60"
-              placeholder="Ingrese su correo electrónico"
+              class="rounded-r border border-[#C7CED7] pl-3 w-60 focus:outline-none"
+              placeholder="Email"
               type="text"
               id="email"
               name="email"
@@ -68,8 +64,11 @@
             />
           </div>
           <!--Input for password-->
-          <div class="flex flex-col space-y-2 justify-center items-center">
-            <div class="flex">
+          <div class="flex ml-7" style="margin-top: 0.5rem">
+            <div
+              class="flex items-center bg-[#C7CED7] p-2 border border-[#C7CED7]"
+              for="email"
+            >
               <svg
                 class="w-6 text-[#4B4643]"
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,16 +84,39 @@
                   d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
                 />
               </svg>
-              <label class="text-[#4B4643]" for="password">Contraseña</label>
             </div>
             <input
-              class="rounded border border-[#4B4643] p-1 w-60"
-              placeholder="Ingrese su contraseña"
+              class="rounded-r border border-[#C7CED7] pl-3 w-60 focus:outline-none"
+              placeholder="Contraseña"
               type="password"
-              id="password"
-              name="password"
+              id="email"
+              name="email"
               required
             />
+            <div class="flex items-center ml-1">
+              <a href="#">
+                <svg
+                  class="w-6 text-[#4B4643]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
           <!--Submit button-->
           <button
@@ -110,7 +132,7 @@
             >¿Olvidó su contraseña?</a
           >
         </form>
-      </section>
+      </div>
     </main>
   </body>
 </html>
